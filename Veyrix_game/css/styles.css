@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+body section {
+  background-image: url("../img/wp2859545.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+body section footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.5rem;
+}
+
+body section footer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+body section header {
+  padding: 0.3rem;
+  background: #2471a3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #f3f3f3;
+}
+
+body section header button,
+body section header select {
+  border: 1px solid #f3f3f3;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: #f3f3f3;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+
+body section header #score,
+body section header p {
+  font-size: 0.7rem;
+}
+
+body section header option {
+  color: #2471a3;
+}
+
+body section .container {
+  overflow: hidden;
+  width: 300px;
+  margin: 0 auto;
+  height: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33%) [3];
+  grid-template-columns: repeat(3, 33%);
+  -ms-grid-rows: 50% 50%;
+  grid-template-rows: 50% 50%;
+  cursor: url("../img/Hammer.cur"), default;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+body section .container .img-cont {
+  height: 100%;
+  position: relative;
+}
+
+body section .container .img-cont .target {
+  width: 60%;
+  margin: 0 auto;
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  -webkit-transition: all 75ms linear;
+  transition: all 75ms linear;
+}
+
+body section .container .img-cont .active {
+  -webkit-transform: translate(-50%, 50);
+  transform: translate(-50%, 50);
+  opacity: 1;
+  z-index: 1;
+}
+
+body section .container .img-cont .rock {
+  width: 90%;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1000px) {
+  body section footer {
+    font-size: 1.1rem;
+  }
+  body section header {
+    padding: 0.5rem;
+  }
+  body section header button,
+  body section header select {
+    font-size: 1.1rem;
+    -webkit-transition: all 250ms linear;
+    transition: all 250ms linear;
+  }
+  body section header button:hover,
+  body section header select:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+  }
+  body section header #score,
+  body section header p {
+    font-size: 1.5rem;
+  }
+  body section .container {
+    width: 700px;
+    height: 650px;
+  }
+  body section .container .img-cont .target {
+    width: 50%;
+  }
+  body section .container .img-cont .rock {
+    width: 85%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
